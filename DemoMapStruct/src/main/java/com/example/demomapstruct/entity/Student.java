@@ -9,7 +9,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 
 @Table(name = "student")
-@SequenceGenerator(name = "seq_student_id", sequenceName = "seq_student_id", initialValue = 1, allocationSize=1)
+@SequenceGenerator(name = "HibernateSequence", sequenceName = "seq_student_id", initialValue = 1, allocationSize=1)
 @AttributeOverride(name = "id", column = @Column(name = "student_id"))
 @Getter
 @Setter

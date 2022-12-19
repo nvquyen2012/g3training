@@ -3,7 +3,7 @@ package com.example.demomapstruct.dto;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -11,7 +11,7 @@ public class AbstractDto {
 
     public Long id;
 
-    private LocalDateTime createdDate;
+    private Date createdDate;
 
-    private LocalDateTime updatedDate;
+    private Date updatedDate;
 }

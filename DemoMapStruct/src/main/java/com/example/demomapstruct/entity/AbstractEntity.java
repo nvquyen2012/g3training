@@ -1,28 +1,40 @@
 package com.example.demomapstruct.entity;
 
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @MappedSuperclass
 @Getter
+@Setter
 @EntityListeners(AuditingEntityListener.class)
-public abstract class AbstractEntity {
+public class AbstractEntity implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(name = "HibernateSequence")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "HIBERNATE_SEQUENCE")
     @Column(name = "id", insertable = false, updatable = false, length = 16)
+    @Setter(AccessLevel.PUBLIC)
     private Long id;
 
+    @Column(name = "created_date", updatable = false)
     @CreationTimestamp
-    private LocalDateTime createdDate;
+    private Date createdDate;
 
-    @LastModifiedDate
-    private LocalDateTime updatedDate;
+    @Column(name = "updated_date")
+    @UpdateTimestamp
+    private Date updatedDate;
+
+    public void setUpdatedTimeToNow(){
+        this.updatedDate = new Date();
+    }
 }

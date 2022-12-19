@@ -15,6 +15,7 @@ public class AddressServiceImpl extends AbstractServiceImpl<Address, AddressDto>
 
     @Autowired
     public AddressServiceImpl(AddressRepository addressRepository, AddressMapper addressMapper) {
-        super(addressRepository, addressMapper);
+        super(addressRepository);
+        super.setAbstractMapper(addressMapper);
     }
 }
