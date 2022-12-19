@@ -13,9 +13,8 @@ public class AbstractController<T extends AbstractEntity, E extends AbstractDto>
 
     private AbstractService<T, E> abstractService;
 
-    public AbstractController(AbstractService<T, E> abstractService, AbstractMapper<T, E> abstractMapper) {
+    public AbstractController(AbstractService<T, E> abstractService) {
         this.abstractService = abstractService;
-        this.abstractService.setAbstractMapper(abstractMapper);
     }
 
     @GetMapping("/get")

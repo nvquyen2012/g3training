@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class AddressController extends AbstractController<Address, AddressDto>{
 
     @Autowired
-    public AddressController(AddressService addressService, AddressMapper addressMapper) {
-        super(addressService, addressMapper);
+    public AddressController(AddressService addressService) {
+        super(addressService);
     }
 
 }

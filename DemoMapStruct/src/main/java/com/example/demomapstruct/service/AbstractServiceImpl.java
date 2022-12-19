@@ -20,8 +20,9 @@ public abstract class AbstractServiceImpl<T extends AbstractEntity, E extends Ab
 
     private AbstractMapper<T, E> abstractMapper;
 
-    public AbstractServiceImpl(AbstractRepository<T> abstractRepository) {
+    public AbstractServiceImpl(AbstractRepository<T> abstractRepository, AbstractMapper<T, E> abstractMapper) {
         this.abstractRepository = abstractRepository;
+        this.abstractMapper = abstractMapper;
     }
 
     @Override
