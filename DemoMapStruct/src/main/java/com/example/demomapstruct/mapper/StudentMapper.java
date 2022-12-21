@@ -1,12 +1,10 @@
 package com.example.demomapstruct.mapper;
 
 import com.example.demomapstruct.dto.StudentDTO;
-import com.example.demomapstruct.entity.Address;
 import com.example.demomapstruct.entity.Student;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
-import org.mapstruct.Qualifier;
 
 @Mapper(componentModel = "spring")
 public interface StudentMapper extends AbstractMapper<Student, StudentDTO>{
