@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Getter
 @Setter
-public class AbstractDto {
+public class AbstractDTO {
 
     public Long id;
 

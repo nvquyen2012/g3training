@@ -6,7 +6,7 @@ public interface AbstractMapper<T, Y> {
 
     T toEntity(Y dto);
 
-    Y toDto(T entity);
+    Y toDTO(T entity);
 
-    List<Y> toListDto(List<T> list);
+    List<Y> toListDTO(List<T> list);
 }

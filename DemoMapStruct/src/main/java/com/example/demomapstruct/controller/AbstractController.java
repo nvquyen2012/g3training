@@ -1,6 +1,6 @@
 package com.example.demomapstruct.controller;
 
-import com.example.demomapstruct.dto.AbstractDto;
+import com.example.demomapstruct.dto.AbstractDTO;
 import com.example.demomapstruct.dto.PageObject;
 import com.example.demomapstruct.entity.AbstractEntity;
 import com.example.demomapstruct.mapper.AbstractMapper;
@@ -9,7 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-public class AbstractController<T extends AbstractEntity, E extends AbstractDto> {
+public class AbstractController<T extends AbstractEntity, E extends AbstractDTO> {
 
     private AbstractService<T, E> abstractService;
 

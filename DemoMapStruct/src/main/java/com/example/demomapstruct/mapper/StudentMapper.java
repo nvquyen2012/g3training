@@ -1,6 +1,6 @@
 package com.example.demomapstruct.mapper;
 
-import com.example.demomapstruct.dto.StudentDto;
+import com.example.demomapstruct.dto.StudentDTO;
 import com.example.demomapstruct.entity.Address;
 import com.example.demomapstruct.entity.Student;
 import org.mapstruct.Mapper;
@@ -9,14 +9,14 @@ import org.mapstruct.Named;
 import org.mapstruct.Qualifier;
 
 @Mapper(componentModel = "spring")
-public interface StudentMapper extends AbstractMapper<Student, StudentDto>{
+public interface StudentMapper extends AbstractMapper<Student, StudentDTO>{
 
     @Mapping(target = "fullName", expression = "java(entity.getFirstName() + \" \" + entity.getLastName())")
-    StudentDto toDto(Student entity);
+    StudentDTO toDTO(Student entity);
 
     @Mapping(target = "firstName", source = "fullName", qualifiedByName = "getFirstName")
     @Mapping(target = "lastName", source = "fullName", qualifiedByName = "getLastName")
-    Student toEntity(StudentDto dto);
+    Student toEntity(StudentDTO dto);
 
     @Named("getFirstName")
     static String getFirstName(String fullName) {

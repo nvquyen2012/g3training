@@ -1,6 +1,6 @@
 package com.example.demomapstruct.service;
 
-import com.example.demomapstruct.dto.AbstractDto;
+import com.example.demomapstruct.dto.AbstractDTO;
 import com.example.demomapstruct.dto.PageObject;
 import com.example.demomapstruct.entity.AbstractEntity;
 import com.example.demomapstruct.mapper.AbstractMapper;
@@ -14,7 +14,7 @@ import org.springframework.data.domain.Pageable;
 
 @Getter
 @Setter
-public abstract class AbstractServiceImpl<T extends AbstractEntity, E extends AbstractDto> implements AbstractService<T, E> {
+public abstract class AbstractServiceImpl<T extends AbstractEntity, E extends AbstractDTO> implements AbstractService<T, E> {
 
     private AbstractRepository<T> abstractRepository;
 
@@ -28,7 +28,7 @@ public abstract class AbstractServiceImpl<T extends AbstractEntity, E extends Ab
     @Override
     public E create(E dto) {
         T entity = toEntity(dto);
-        return toDto(abstractRepository.<T>save(entity));
+        return toDTO(abstractRepository.<T>save(entity));
     }
 
     @Override
@@ -43,7 +43,7 @@ public abstract class AbstractServiceImpl<T extends AbstractEntity, E extends Ab
     @Override
     public E update(E dto) {
         T entity = toEntity(dto);
-        return toDto(abstractRepository.<T>save(entity));
+        return toDTO(abstractRepository.<T>save(entity));
     }
 
     @Override
@@ -59,15 +59,15 @@ public abstract class AbstractServiceImpl<T extends AbstractEntity, E extends Ab
                 .pageSize(page.getSize())
                 .totalPages(page.getTotalPages())
                 .totalElements(page.getNumberOfElements())
-                .content(abstractMapper.toListDto(page.getContent())).build();
+                .content(abstractMapper.toListDTO(page.getContent())).build();
     }
 
     private T toEntity(E dto) {
         return abstractMapper.toEntity(dto);
     }
 
-    private E toDto(T entity) {
-        return abstractMapper.toDto(entity);
+    private E toDTO(T entity) {
+        return abstractMapper.toDTO(entity);
     }
 
 }

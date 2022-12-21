@@ -5,7 +5,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-public class AddressDto extends AbstractDto{
+public class AddressDTO extends AbstractDTO{
 
 //    private Long id;
 

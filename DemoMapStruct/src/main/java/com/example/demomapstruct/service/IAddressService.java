@@ -1,13 +1,13 @@
 package com.example.demomapstruct.service;
 
-import com.example.demomapstruct.dto.AddressDto;
+import com.example.demomapstruct.dto.AddressDTO;
 import com.example.demomapstruct.payload.BasePage;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 
 public interface IAddressService {
 
-    AddressDto create(AddressDto dto);
+    AddressDTO create(AddressDTO dto);
 
-    BasePage<AddressDto> get(Pageable pageable);
+    BasePage<AddressDTO> get(Pageable pageable);
 }

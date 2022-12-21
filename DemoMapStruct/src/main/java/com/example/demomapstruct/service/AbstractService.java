@@ -1,13 +1,13 @@
 package com.example.demomapstruct.service;
 
-import com.example.demomapstruct.dto.AbstractDto;
+import com.example.demomapstruct.dto.AbstractDTO;
 import com.example.demomapstruct.dto.PageObject;
 import com.example.demomapstruct.entity.AbstractEntity;
 import com.example.demomapstruct.mapper.AbstractMapper;
 import com.example.demomapstruct.repository.AbstractRepository;
 import org.springframework.data.domain.Pageable;
 
-public interface AbstractService<T extends AbstractEntity, E extends AbstractDto> {
+public interface AbstractService<T extends AbstractEntity, E extends AbstractDTO> {
 
     E create(E dto);
 
