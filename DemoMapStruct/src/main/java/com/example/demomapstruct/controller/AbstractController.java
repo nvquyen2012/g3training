@@ -3,7 +3,6 @@ package com.example.demomapstruct.controller;
 import com.example.demomapstruct.dto.AbstractDTO;
 import com.example.demomapstruct.dto.PageObject;
 import com.example.demomapstruct.entity.AbstractEntity;
-import com.example.demomapstruct.mapper.AbstractMapper;
 import com.example.demomapstruct.service.AbstractService;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;

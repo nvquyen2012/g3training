@@ -21,7 +21,7 @@ import java.util.Date;
 public class AbstractEntity implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "HIBERNATE_SEQUENCE")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_sequence")
     @Column(name = "id", insertable = false, updatable = false, length = 16)
     @Setter(AccessLevel.PUBLIC)
     private Long id;

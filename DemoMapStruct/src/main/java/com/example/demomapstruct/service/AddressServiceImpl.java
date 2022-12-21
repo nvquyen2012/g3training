@@ -1,11 +1,8 @@
 package com.example.demomapstruct.service;
 
 import com.example.demomapstruct.dto.AddressDTO;
-import com.example.demomapstruct.dto.StudentDTO;
 import com.example.demomapstruct.entity.Address;
-import com.example.demomapstruct.mapper.AbstractMapper;
 import com.example.demomapstruct.mapper.AddressMapper;
-import com.example.demomapstruct.repository.AbstractRepository;
 import com.example.demomapstruct.repository.AddressRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,5 +13,10 @@ public class AddressServiceImpl extends AbstractServiceImpl<Address, AddressDTO>
     @Autowired
     public AddressServiceImpl(AddressRepository addressRepository, AddressMapper addressMapper) {
         super(addressRepository, addressMapper);
+    }
+
+    @Override
+    public AddressDTO findByCity(String city) {
+        return null;
     }
 }
