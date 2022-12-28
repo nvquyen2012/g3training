@@ -4,7 +4,7 @@ import com.example.demomapstruct.dto.AddressDTO;
 import com.example.demomapstruct.entity.Address;
 import org.mapstruct.Mapper;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {StudentAddressMapper.class})
 public interface AddressMapper extends AbstractMapper<Address, AddressDTO>{
 
 }

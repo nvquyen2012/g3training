@@ -11,5 +11,5 @@ public class AddressDTO extends AbstractDTO{
 
     private String city;
 
-    private String address;
+    private String fullAddress;
 }

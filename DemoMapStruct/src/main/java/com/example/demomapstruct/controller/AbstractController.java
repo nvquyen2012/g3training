@@ -1,5 +1,6 @@
 package com.example.demomapstruct.controller;
 
+import com.example.demomapstruct.annotation.MakeChangesInDatabase;
 import com.example.demomapstruct.dto.AbstractDTO;
 import com.example.demomapstruct.dto.PageObject;
 import com.example.demomapstruct.entity.AbstractEntity;
@@ -21,16 +22,19 @@ public class AbstractController<T extends AbstractEntity, E extends AbstractDTO>
         return abstractService.get(pageable);
     }
 
+    @MakeChangesInDatabase
     @PostMapping("/create")
     public ResponseEntity<E> create(@RequestBody E dto) {
         return ResponseEntity.ok(abstractService.create(dto));
     }
 
+    @MakeChangesInDatabase
     @PutMapping("/update")
     public ResponseEntity<E> update(@RequestBody E dto) {
         return ResponseEntity.ok(abstractService.update(dto));
     }
 
+    @MakeChangesInDatabase
     @DeleteMapping("/delete")
     public ResponseEntity<E> delete(@RequestBody E dto) {
         return ResponseEntity.ok(abstractService.delete(dto));

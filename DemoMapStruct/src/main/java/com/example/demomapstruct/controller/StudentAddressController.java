@@ -1,0 +1,17 @@
+package com.example.demomapstruct.controller;
+
+import com.example.demomapstruct.dto.StudentAddressDTO;
+import com.example.demomapstruct.entity.StudentAddress;
+import com.example.demomapstruct.service.AbstractService;
+import com.example.demomapstruct.service.StudentAddressService;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/student_address")
+public class StudentAddressController extends AbstractController<StudentAddress, StudentAddressDTO> {
+
+    public StudentAddressController(StudentAddressService studentAddressService) {
+        super(studentAddressService);
+    }
+}
