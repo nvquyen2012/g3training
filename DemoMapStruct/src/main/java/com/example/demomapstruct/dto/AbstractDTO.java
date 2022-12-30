@@ -14,4 +14,6 @@ public class AbstractDTO {
     private Date createdDate;
 
     private Date updatedDate;
+
+    private String message;
 }

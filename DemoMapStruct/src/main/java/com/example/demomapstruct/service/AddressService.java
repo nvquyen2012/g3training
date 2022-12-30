@@ -5,4 +5,6 @@ import com.example.demomapstruct.entity.Address;
 
 public interface AddressService extends AbstractService<Address, AddressDTO> {
     AddressDTO findByCity(String city);
+
+    AddressDTO getOne(Long id);
 }

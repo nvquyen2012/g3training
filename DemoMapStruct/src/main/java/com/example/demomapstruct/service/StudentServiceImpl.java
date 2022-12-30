@@ -2,6 +2,7 @@ package com.example.demomapstruct.service;
 
 import com.example.demomapstruct.dto.StudentDTO;
 import com.example.demomapstruct.entity.Student;
+import com.example.demomapstruct.exception.ResourceNotFoundException;
 import com.example.demomapstruct.mapper.StudentMapper;
 import com.example.demomapstruct.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,5 +14,11 @@ public class StudentServiceImpl extends AbstractServiceImpl<Student, StudentDTO>
     @Autowired
     public StudentServiceImpl(StudentRepository studentRepository, StudentMapper studentMapper) {
         super(studentRepository, studentMapper);
+    }
+
+    @Override
+    public StudentDTO getOne(Long id) {
+        return super.getAbstractMapper()
+                .toDTO(super.getAbstractRepository().findById(id).orElseThrow(() -> new ResourceNotFoundException(id)));
     }
 }
