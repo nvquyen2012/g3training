@@ -12,7 +12,6 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 
-@Order(Ordered.HIGHEST_PRECEDENCE)
 @Aspect
 @Component
 @Slf4j
@@ -23,8 +22,8 @@ public class UpdateAndDeleteAspect {
 
     }
 
-    @Before(value = "target(com.example.demomapstruct.controller.AbstractController)")
-    public void loggerForInvalidRequest(JoinPoint joinPoint) {
-        log.error("Error when execute {} in {} with exception", joinPoint.getSignature().getName(), joinPoint.getTarget().getClass().getSimpleName());
-    }
+//    @Before(value = "target(com.example.demomapstruct.controller.AbstractController)")
+//    public void loggerForInvalidRequest(JoinPoint joinPoint) {
+//        log.error("Error when execute {} in {} with exception", joinPoint.getSignature().getName(), joinPoint.getTarget().getClass().getSimpleName());
+//    }
 }

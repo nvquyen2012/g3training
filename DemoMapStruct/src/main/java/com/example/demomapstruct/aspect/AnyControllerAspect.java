@@ -50,9 +50,9 @@ public class AnyControllerAspect {
 //        log.info("Student: {}", res.getBody().toString());
 //    }
 //
-    @AfterThrowing(value = "execution(* com.example.demomapstruct.controller.AbstractController.*(..))", throwing = "ex")
-    public void afterThrowing(JoinPoint jp, ResourceNotFoundException ex){
-        log.error("Error when execute {} in {} with exception {}", jp.getSignature().getName(), jp.getTarget().getClass().getSimpleName(), ex.getMessage());
-    }
+//    @AfterThrowing(value = "execution(* com.example.demomapstruct.controller.AbstractController.*(..))", throwing = "ex")
+//    public void afterThrowing(JoinPoint jp, ResourceNotFoundException ex){
+//        log.error("Error when execute {} in {} with exception {}", jp.getSignature().getName(), jp.getTarget().getClass().getSimpleName(), ex.getMessage());
+//    }
 
 }

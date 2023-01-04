@@ -6,10 +6,11 @@ import com.example.demomapstruct.payload.BaseResponse;
 import com.example.demomapstruct.service.AddressService;
 import com.example.demomapstruct.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping(("/api/address"))
@@ -27,6 +28,16 @@ public class AddressController extends AbstractController<Address, AddressDTO> {
                 .code("OK")
                 .message("")
                 .build();
+    }
+
+    @PostMapping("/create-custom")
+    public ResponseEntity<AddressDTO> create(@RequestBody @Valid AddressDTO dto, HttpServletRequest request) {
+        String city = request.getAttribute("city").toString();
+        if(city != null) {
+            dto.setCity(city);
+        }
+        AddressDTO result = super.getAbstractService().create(dto);
+        return ResponseEntity.ok(result);
     }
 
 }
