@@ -1,10 +1,11 @@
 package com.example.demomapstruct.entity;
 
+import com.example.libs.entity.AbstractEntity;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;

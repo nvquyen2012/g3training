@@ -1,20 +1,20 @@
 package com.example.demomapstruct.dto;
 
+import com.example.libs.dto.AbstractDTO;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.hibernate.validator.constraints.Length;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.Size;
 import java.util.HashSet;
 import java.util.Set;
 
 @Getter
 @Setter
 @ToString
-public class StudentDTO extends AbstractDTO{
+public class StudentDTO extends AbstractDTO {
 
 
     private String firstName;

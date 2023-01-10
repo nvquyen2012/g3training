@@ -2,9 +2,10 @@ package com.example.demomapstruct.service;
 
 import com.example.demomapstruct.dto.AddressDTO;
 import com.example.demomapstruct.entity.Address;
-import com.example.demomapstruct.exception.ResourceNotFoundException;
 import com.example.demomapstruct.mapper.AddressMapper;
 import com.example.demomapstruct.repository.AddressRepository;
+import com.example.libs.exception.ResourceNotFoundException;
+import com.example.libs.service.AbstractServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

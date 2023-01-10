@@ -2,9 +2,10 @@ package com.example.demomapstruct.service;
 
 import com.example.demomapstruct.dto.StudentDTO;
 import com.example.demomapstruct.entity.Student;
-import com.example.demomapstruct.exception.ResourceNotFoundException;
 import com.example.demomapstruct.mapper.StudentMapper;
 import com.example.demomapstruct.repository.StudentRepository;
+import com.example.libs.exception.ResourceNotFoundException;
+import com.example.libs.service.AbstractServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

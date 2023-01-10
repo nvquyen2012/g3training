@@ -2,11 +2,14 @@ package com.example.demomapstruct.controller;
 
 import com.example.demomapstruct.dto.StudentDTO;
 import com.example.demomapstruct.entity.Student;
-import com.example.demomapstruct.exception.ResourceNotFoundException;
-import com.example.demomapstruct.payload.BaseResponse;
 import com.example.demomapstruct.service.StudentService;
+import com.example.libs.controller.AbstractController;
+import com.example.libs.payload.BaseResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/student")

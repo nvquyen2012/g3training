@@ -4,6 +4,7 @@ import com.example.demomapstruct.dto.StudentAddressDTO;
 import com.example.demomapstruct.entity.StudentAddress;
 import com.example.demomapstruct.mapper.StudentAddressMapper;
 import com.example.demomapstruct.repository.StudentAddressRepository;
+import com.example.libs.service.AbstractServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

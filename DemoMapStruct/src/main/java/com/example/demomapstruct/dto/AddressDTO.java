@@ -1,11 +1,14 @@
 package com.example.demomapstruct.dto;
 
-import lombok.*;
+import com.example.libs.dto.AbstractDTO;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
 @ToString
-public class AddressDTO extends AbstractDTO{
+public class AddressDTO extends AbstractDTO {
 
 //    private Long id;
 

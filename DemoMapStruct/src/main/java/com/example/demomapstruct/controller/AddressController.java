@@ -2,9 +2,9 @@ package com.example.demomapstruct.controller;
 
 import com.example.demomapstruct.dto.AddressDTO;
 import com.example.demomapstruct.entity.Address;
-import com.example.demomapstruct.payload.BaseResponse;
 import com.example.demomapstruct.service.AddressService;
-import com.example.demomapstruct.service.StudentService;
+import com.example.libs.controller.AbstractController;
+import com.example.libs.payload.BaseResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
