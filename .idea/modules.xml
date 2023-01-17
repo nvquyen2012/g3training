@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DemoMapStruct/DemoMapStruct.iml" filepath="$PROJECT_DIR$/DemoMapStruct/DemoMapStruct.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery-server/discovery-server.iml" filepath="$PROJECT_DIR$/discovery-server/discovery-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feign-client/feign-client.iml" filepath="$PROJECT_DIR$/feign-client/feign-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/g3training.iml" filepath="$PROJECT_DIR$/.idea/g3training.iml" />
       <module fileurl="file://$PROJECT_DIR$/libs/libs.iml" filepath="$PROJECT_DIR$/libs/libs.iml" />
     </modules>
